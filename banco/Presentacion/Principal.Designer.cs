@@ -152,7 +152,7 @@
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.RowHeadersWidth = 62;
             this.dgvCuentas.RowTemplate.Height = 28;
-            this.dgvCuentas.Size = new System.Drawing.Size(1493, 352);
+            this.dgvCuentas.Size = new System.Drawing.Size(999, 352);
             this.dgvCuentas.TabIndex = 2;
             this.dgvCuentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuentas_CellContentClick);
             // 
@@ -164,7 +164,7 @@
             this.dgvTransacciones.ReadOnly = true;
             this.dgvTransacciones.RowHeadersWidth = 62;
             this.dgvTransacciones.RowTemplate.Height = 28;
-            this.dgvTransacciones.Size = new System.Drawing.Size(1493, 330);
+            this.dgvTransacciones.Size = new System.Drawing.Size(546, 330);
             this.dgvTransacciones.TabIndex = 3;
             this.dgvTransacciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransacciones_CellContentClick);
             // 
@@ -176,7 +176,7 @@
             this.dgvMovimientos.ReadOnly = true;
             this.dgvMovimientos.RowHeadersWidth = 62;
             this.dgvMovimientos.RowTemplate.Height = 28;
-            this.dgvMovimientos.Size = new System.Drawing.Size(1494, 210);
+            this.dgvMovimientos.Size = new System.Drawing.Size(397, 210);
             this.dgvMovimientos.TabIndex = 4;
             this.dgvMovimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMovimientos_CellContentClick);
             // 
@@ -184,7 +184,7 @@
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Location = new System.Drawing.Point(45, 978);
+            this.btnActualizar.Location = new System.Drawing.Point(1371, 188);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(132, 49);
             this.btnActualizar.TabIndex = 5;

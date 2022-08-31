@@ -42,7 +42,7 @@
             this.lstCuentas.ItemHeight = 20;
             this.lstCuentas.Location = new System.Drawing.Point(12, 24);
             this.lstCuentas.Name = "lstCuentas";
-            this.lstCuentas.Size = new System.Drawing.Size(449, 444);
+            this.lstCuentas.Size = new System.Drawing.Size(453, 444);
             this.lstCuentas.TabIndex = 0;
             this.lstCuentas.SelectedIndexChanged += new System.EventHandler(this.lstCuentas_SelectedIndexChanged);
             // 
