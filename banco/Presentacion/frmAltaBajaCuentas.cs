@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace banco.Presentacion
 {
-    public partial class frmAltaBaja : Form
+    public partial class frmAltaBajaCuentas : Form
     {
         DbHelper oBD;
         List<Cuenta> lCuentas;
-        public frmAltaBaja()
+        public frmAltaBajaCuentas()
         {
             InitializeComponent();
             oBD = new DbHelper();

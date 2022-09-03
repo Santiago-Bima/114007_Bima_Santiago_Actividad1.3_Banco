@@ -1,6 +1,6 @@
 ﻿namespace banco.Presentacion
 {
-    partial class frmAltaBaja
+    partial class frmAltaBajaCuentas
     {
         /// <summary>
         /// Required designer variable.

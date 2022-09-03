@@ -43,6 +43,7 @@
             this.dgvTransacciones = new System.Windows.Forms.DataGridView();
             this.dgvMovimientos = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.darDeBajaAltaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).BeginInit();
@@ -108,21 +109,22 @@
             // nuevaToolStripMenuItem
             // 
             this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
-            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.nuevaToolStripMenuItem.Text = "Nueva";
             this.nuevaToolStripMenuItem.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
             // 
             // darDeBajaAltaToolStripMenuItem
             // 
             this.darDeBajaAltaToolStripMenuItem.Name = "darDeBajaAltaToolStripMenuItem";
-            this.darDeBajaAltaToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.darDeBajaAltaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.darDeBajaAltaToolStripMenuItem.Text = "Dar de Baja/Alta";
             this.darDeBajaAltaToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaAltaToolStripMenuItem_Click);
             // 
             // transaccionesToolStripMenuItem
             // 
             this.transaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaToolStripMenuItem1});
+            this.nuevaToolStripMenuItem1,
+            this.darDeBajaAltaToolStripMenuItem1});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
             this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
@@ -130,7 +132,7 @@
             // nuevaToolStripMenuItem1
             // 
             this.nuevaToolStripMenuItem1.Name = "nuevaToolStripMenuItem1";
-            this.nuevaToolStripMenuItem1.Size = new System.Drawing.Size(164, 34);
+            this.nuevaToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.nuevaToolStripMenuItem1.Text = "Nueva";
             this.nuevaToolStripMenuItem1.Click += new System.EventHandler(this.nuevaToolStripMenuItem1_Click);
             // 
@@ -192,6 +194,13 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // darDeBajaAltaToolStripMenuItem1
+            // 
+            this.darDeBajaAltaToolStripMenuItem1.Name = "darDeBajaAltaToolStripMenuItem1";
+            this.darDeBajaAltaToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.darDeBajaAltaToolStripMenuItem1.Text = "Dar de Baja/Alta";
+            this.darDeBajaAltaToolStripMenuItem1.Click += new System.EventHandler(this.darDeBajaAltaToolStripMenuItem1_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -236,5 +245,6 @@
         private System.Windows.Forms.DataGridView dgvTransacciones;
         private System.Windows.Forms.DataGridView dgvMovimientos;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.ToolStripMenuItem darDeBajaAltaToolStripMenuItem1;
     }
 }

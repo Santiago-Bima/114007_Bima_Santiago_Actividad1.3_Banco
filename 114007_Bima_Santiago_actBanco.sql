@@ -50,15 +50,12 @@ create table movimientos(
 create table Transacciones(
 	id_cuenta int,
 	nro_transaccion int identity(1,1),
-	fecha datetime
+	fecha datetime,
+	activo bit
 	constraint pk_nroTransaccion primary key (nro_transaccion)
 	constraint fk_id_cuente foreign key (id_cuenta) references cuentas (id_cuenta)
 )
 
-
-
-
-insert into clientes (nombre, apellido, dni) values ('Santiago', 'Bima', 45488189);
 
 
 insert into tiposCuentas (nombre) values('caja de ahorros');
@@ -70,14 +67,6 @@ insert into tiposCuentas (nombre) values('caja sueldo');
 insert into tiposMovimientos (tipo) values('Abono')
 insert into tiposMovimientos (tipo) values('Retiro')
 
-select * from clientes;
-select * from cuentas;
-select * from transacciones;
-select * from movimientos;
-select * from tiposMovimientos;
-select * from tiposCuentas; 
-
-
 
 create proc sp_ingresarCliente 
 	@nombre varchar(20),
@@ -87,6 +76,8 @@ as
 BEGIN
 insert into clientes (nombre, apellido, dni) values (@nombre, @apellido, @dni)
 END
+
+
 
 create proc sp_ingresarCuenta 
 	@cbu bigint,
@@ -98,6 +89,10 @@ insert into cuentas (cbu, id_tipoCuenta, id_cliente,total, activo) values (@cbu,
 END
 
 
+
+
+
+
 create proc sp_actualizarCliente
 	@nombre varchar(20),
 	@apellido varchar(20),
@@ -106,6 +101,8 @@ as
 BEGIN
 update clientes SET nombre=@nombre, apellido=@apellido where dni=@dni
 END
+
+
 
 create proc sp_actualizarCuenta
 	@cbu bigint,
@@ -116,10 +113,16 @@ BEGIN
 update cuentas set id_tipoCuenta=@id_tipoCuenta, id_cliente=@id_cliente where cbu=@cbu
 END
 
+
+
+
+
 create proc sp_eliminarCliente
 	@dni bigint
 as
 delete from clientes where @dni=dni
+
+
 
 CREATE PROCEDURE SP_PROXIMO_ID
 @next int OUTPUT
@@ -127,6 +130,10 @@ AS
 BEGIN
 	SET @next = (SELECT MAX(nro_transaccion)+1  FROM transacciones);
 END
+
+
+
+
 
 create PROCEDURE SP_INSERTAR_MAESTRO 
 	@id_cuenta int ,
@@ -140,6 +147,7 @@ BEGIN
 END
 
 
+
 create PROCEDURE SP_INSERTAR_DETALLE
 	@monto money,
 	@nro_transaccion int,
@@ -151,12 +159,20 @@ BEGIN
   
 END
 
+
+
+
+
 create proc sp_adjuntarTransaccion
 	@total money,
 	@ultimo_mov datetime,
 	@id_cuenta int
 as
 update cuentas set total=@total, ultimo_mov=@ultimo_mov where id_cuenta=@id_cuenta
+
+
+
+
 
 create procedure Sp_eliminarMovimiento
 	@dni int
@@ -167,6 +183,8 @@ join cuentas cu on t.id_cuenta=cu.id_cuenta
 join clientes c  on c.id_cliente=cu.id_cliente
 where c.dni = @dni
 
+
+
 create proc Sp_eliminarTransaccionYRelacionados
 	@dni int
 as
@@ -174,6 +192,8 @@ delete transacciones
 from transacciones t join cuentas cu on t.id_cuenta=cu.id_cuenta
 join clientes c  on c.id_cliente=cu.id_cliente
 where c.dni = @dni
+
+
 
 create  proc Sp_eliminarCuentaYRelacionados
 @dni int,
@@ -183,10 +203,16 @@ delete cuentas
 from cuentas cu join clientes c  on c.id_cliente=cu.id_cliente
 where c.dni = @dni or c.id_cliente=@id_cliente
 
+
+
+
+
 create proc sp_darAlta
  @cbu int
 as
 update cuentas set activo=1 where cbu=@cbu
+
+
 
 create proc sp_darBaja
  @cbu int
@@ -194,3 +220,25 @@ as
 update cuentas set activo=0 where cbu=@cbu
 
 
+
+create proc sp_darAltaTransaccion
+	@nro int
+as
+update transacciones set activo=1 where nro_transaccion=@nro
+
+
+create proc sp_darBajaTransaccion
+	@nro int
+as
+update transacciones set activo=0 where nro_transaccion=@nro
+
+
+create proc sp_actualizarTotal
+	@monto money,
+	@id_cuenta int
+as
+update cuentas set total=@monto where id_cuenta=@id_cuenta
+
+
+
+update cuentas set total=200 where id_cuenta=16

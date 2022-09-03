@@ -10,8 +10,10 @@ namespace banco
     internal class Cuenta
     {
         private int cbu;
+        private int id;
         private int tipoCuenta;
         private int cliente;
+        private double total;
         private int activo;
 
 
@@ -19,6 +21,12 @@ namespace banco
         {
             get { return cbu; }
             set { cbu = value; }
+        }
+
+        public int pId
+        {
+            get { return id; }
+            set { id = value; }
         }
 
         public int pTipoCuenta
@@ -33,6 +41,12 @@ namespace banco
             set { cliente = value; }
         }
 
+        public double pTotal
+        {
+            get { return total; }
+            set { total = value; }
+        }
+
         public int pActivo
         {
             get { return activo; }
@@ -44,14 +58,16 @@ namespace banco
             tipoCuenta= 0;
             cliente= 0;
             activo = 1;
+            total = 0;
         }
 
-        public Cuenta(int cbu, int tipoCuenta, int cliente, int activo)
+        public Cuenta(int cbu, int tipoCuenta, int cliente,double total, int activo)
         {
             this.cbu = cbu;
             this.tipoCuenta = tipoCuenta;
             this.cliente = cliente;
             this.activo = 1;
+            this.total = total;
         }
         public override string ToString()
         {

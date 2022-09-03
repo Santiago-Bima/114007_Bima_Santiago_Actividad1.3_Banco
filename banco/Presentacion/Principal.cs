@@ -80,7 +80,7 @@ namespace banco.Presentacion
             dgvTransacciones.Rows.Clear();
             dgvTransacciones.Columns.Clear();
             int idCuenta= Convert.ToInt32(dgvCuentas.Rows[e.RowIndex].Cells[0].Value);
-            DataTable tabla = oBD.ConsultarDb("Select nro_transaccion 'Numero de la Transaccion', total Total, fecha 'Fecha de realizacion' from transacciones where id_cuenta=" + idCuenta);
+            DataTable tabla = oBD.ConsultarDb("Select nro_transaccion 'Numero de la Transaccion', total Total, fecha 'Fecha de realizacion' from transacciones where id_cuenta=" + idCuenta + " and activo=1");
             dgvTransacciones.DataSource = tabla;
         }
 
@@ -90,9 +90,9 @@ namespace banco.Presentacion
             dgvMovimientos.Rows.Clear();
             dgvMovimientos.Columns.Clear();
             int nroTransaccion = Convert.ToInt32(dgvTransacciones.Rows[e.RowIndex].Cells[0].Value);
-            DataTable tabla = oBD.ConsultarDb("Select monto Monto, t.tipo from Movimientos m " +
-                "join tiposMovimientos t on t.id_tipo=m.id_tipo " +
-                "where nro_transaccion=" + nroTransaccion);
+            DataTable tabla = oBD.ConsultarDb("Select monto Monto, t.tipo from Movimientos m" +
+                " join tiposMovimientos t on t.id_tipo=m.id_tipo " +
+                " where nro_transaccion=" + nroTransaccion);
             dgvMovimientos.DataSource = tabla;
         }
 
@@ -147,7 +147,13 @@ namespace banco.Presentacion
 
         private void darDeBajaAltaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAltaBaja AltaBaja = new frmAltaBaja();
+            frmAltaBajaCuentas AltaBaja = new frmAltaBajaCuentas();
+            AltaBaja.Show();
+        }
+
+        private void darDeBajaAltaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAltaBajaTransacciones AltaBaja = new frmAltaBajaTransacciones();
             AltaBaja.Show();
         }
     }

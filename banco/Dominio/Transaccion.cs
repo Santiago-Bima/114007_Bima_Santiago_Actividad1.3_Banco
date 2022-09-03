@@ -9,13 +9,28 @@ namespace banco.Dominio
     internal class Transaccion
     {
         private int idCuenta;
+        private int nroT;
+        private double monto;
         private DateTime fecha;
+        private int activo;
         public List<Movimiento> Movimiento { get; set; }
 
         public int IdCuenta
         {
             get { return idCuenta; }
             set { idCuenta = value; }
+        }
+
+        public int NroT
+        {
+            get { return nroT; }
+            set { nroT = value; }
+        }
+
+        public double Monto
+        {
+            get { return monto; }
+            set { monto = value; }
         }
         public DateTime Fecha
         {
@@ -25,6 +40,11 @@ namespace banco.Dominio
         public Transaccion()
         {
             Movimiento = new List<Movimiento>();
+        }
+        public int pActivo
+        {
+            get { return activo; }
+            set { activo = value; }
         }
 
         public void AgregarMovimiento(Movimiento movimiento)
