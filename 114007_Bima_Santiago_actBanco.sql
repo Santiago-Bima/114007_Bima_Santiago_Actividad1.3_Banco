@@ -241,5 +241,3 @@ as
 update cuentas set total=@monto where id_cuenta=@id_cuenta
 
 
-
-update cuentas set total=200 where id_cuenta=16
