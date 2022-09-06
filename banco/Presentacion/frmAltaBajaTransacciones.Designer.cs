@@ -49,7 +49,7 @@
             this.lstCuentas.ItemHeight = 20;
             this.lstCuentas.Location = new System.Drawing.Point(12, 12);
             this.lstCuentas.Name = "lstCuentas";
-            this.lstCuentas.Size = new System.Drawing.Size(400, 604);
+            this.lstCuentas.Size = new System.Drawing.Size(382, 604);
             this.lstCuentas.TabIndex = 1;
             this.lstCuentas.SelectedIndexChanged += new System.EventHandler(this.lstCuentas_SelectedIndexChanged);
             // 
@@ -57,9 +57,9 @@
             // 
             this.lstTransacciones.FormattingEnabled = true;
             this.lstTransacciones.ItemHeight = 20;
-            this.lstTransacciones.Location = new System.Drawing.Point(418, 12);
+            this.lstTransacciones.Location = new System.Drawing.Point(400, 12);
             this.lstTransacciones.Name = "lstTransacciones";
-            this.lstTransacciones.Size = new System.Drawing.Size(694, 344);
+            this.lstTransacciones.Size = new System.Drawing.Size(569, 344);
             this.lstTransacciones.TabIndex = 2;
             this.lstTransacciones.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -67,7 +67,7 @@
             // 
             this.btnBaja.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBaja.Location = new System.Drawing.Point(960, 450);
+            this.btnBaja.Location = new System.Drawing.Point(823, 436);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(130, 49);
             this.btnBaja.TabIndex = 12;
@@ -79,7 +79,7 @@
             // 
             this.btnAlta.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlta.Location = new System.Drawing.Point(960, 383);
+            this.btnAlta.Location = new System.Drawing.Point(823, 369);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(130, 49);
             this.btnAlta.TabIndex = 11;
@@ -91,7 +91,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Location = new System.Drawing.Point(960, 564);
+            this.btnCancelar.Location = new System.Drawing.Point(823, 550);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 49);
             this.btnCancelar.TabIndex = 10;
@@ -102,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(452, 397);
+            this.label1.Location = new System.Drawing.Point(414, 383);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 14;
@@ -111,15 +111,15 @@
             // txtCbu
             // 
             this.txtCbu.Enabled = false;
-            this.txtCbu.Location = new System.Drawing.Point(511, 394);
+            this.txtCbu.Location = new System.Drawing.Point(473, 380);
             this.txtCbu.Name = "txtCbu";
-            this.txtCbu.Size = new System.Drawing.Size(273, 26);
+            this.txtCbu.Size = new System.Drawing.Size(204, 26);
             this.txtCbu.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(507, 464);
+            this.label2.Location = new System.Drawing.Point(442, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 16;
@@ -128,15 +128,15 @@
             // txtNroT
             // 
             this.txtNroT.Enabled = false;
-            this.txtNroT.Location = new System.Drawing.Point(646, 461);
+            this.txtNroT.Location = new System.Drawing.Point(581, 431);
             this.txtNroT.Name = "txtNroT";
-            this.txtNroT.Size = new System.Drawing.Size(273, 26);
+            this.txtNroT.Size = new System.Drawing.Size(209, 26);
             this.txtNroT.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(507, 504);
+            this.label3.Location = new System.Drawing.Point(442, 474);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 18;
@@ -145,15 +145,15 @@
             // txtMonto
             // 
             this.txtMonto.Enabled = false;
-            this.txtMonto.Location = new System.Drawing.Point(646, 504);
+            this.txtMonto.Location = new System.Drawing.Point(581, 474);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(273, 26);
+            this.txtMonto.Size = new System.Drawing.Size(209, 26);
             this.txtMonto.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(507, 547);
+            this.label4.Location = new System.Drawing.Point(442, 517);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 20;
@@ -162,9 +162,9 @@
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(646, 547);
+            this.txtFecha.Location = new System.Drawing.Point(581, 517);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(273, 26);
+            this.txtFecha.Size = new System.Drawing.Size(209, 26);
             this.txtFecha.TabIndex = 19;
             // 
             // frmAltaBajaTransacciones
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1129, 666);
+            this.ClientSize = new System.Drawing.Size(1006, 636);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label3);
@@ -187,7 +187,7 @@
             this.Controls.Add(this.lstTransacciones);
             this.Controls.Add(this.lstCuentas);
             this.Name = "frmAltaBajaTransacciones";
-            this.Text = "frmAltaBajaTransacciones";
+            this.Text = "Transacciones";
             this.Load += new System.EventHandler(this.frmAltaBajaTransacciones_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

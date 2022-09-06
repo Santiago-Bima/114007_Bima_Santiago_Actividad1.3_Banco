@@ -3,6 +3,7 @@ create database Banco1_3
 use Banco1_3 
 set dateformat dmy
 
+
 create table clientes(
 	id_cliente int identity(1,1),
 	nombre varchar (20),

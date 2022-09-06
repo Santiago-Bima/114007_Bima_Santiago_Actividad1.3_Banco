@@ -100,7 +100,7 @@
             this.label1.Text = "CBU";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // frmAltaBaja
+            // frmAltaBajaCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,8 +112,8 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lstCuentas);
-            this.Name = "frmAltaBaja";
-            this.Text = "frmAltaBaja";
+            this.Name = "frmAltaBajaCuentas";
+            this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmAltaBaja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

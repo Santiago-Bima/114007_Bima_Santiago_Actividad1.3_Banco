@@ -156,5 +156,28 @@ namespace banco.Presentacion
             frmAltaBajaTransacciones AltaBaja = new frmAltaBajaTransacciones();
             AltaBaja.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReporteCuentas_Click(object sender, EventArgs e)
+        {
+            frmReporteTransacciones RepoTransaccion = new frmReporteTransacciones();
+            RepoTransaccion.Show();
+        }
+
+        private void btnRepClientes_Click(object sender, EventArgs e)
+        {
+            FrmReporteClientes RepoCliente = new FrmReporteClientes();
+            RepoCliente.Show();
+        }
+
+        private void btnRepoCuentas_Click(object sender, EventArgs e)
+        {
+            FrmReporteCuentas RepoCuenta = new FrmReporteCuentas();
+            RepoCuenta.Show();
+        }
     }
 }

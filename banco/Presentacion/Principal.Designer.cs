@@ -38,12 +38,15 @@
             this.darDeBajaAltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.darDeBajaAltaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lstClientes = new System.Windows.Forms.ListBox();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.dgvTransacciones = new System.Windows.Forms.DataGridView();
             this.dgvMovimientos = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.darDeBajaAltaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReporteCuentas = new System.Windows.Forms.Button();
+            this.btnRepClientes = new System.Windows.Forms.Button();
+            this.btnRepoCuentas = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).BeginInit();
@@ -109,14 +112,14 @@
             // nuevaToolStripMenuItem
             // 
             this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
-            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.nuevaToolStripMenuItem.Text = "Nueva";
             this.nuevaToolStripMenuItem.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
             // 
             // darDeBajaAltaToolStripMenuItem
             // 
             this.darDeBajaAltaToolStripMenuItem.Name = "darDeBajaAltaToolStripMenuItem";
-            this.darDeBajaAltaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.darDeBajaAltaToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.darDeBajaAltaToolStripMenuItem.Text = "Dar de Baja/Alta";
             this.darDeBajaAltaToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaAltaToolStripMenuItem_Click);
             // 
@@ -132,9 +135,16 @@
             // nuevaToolStripMenuItem1
             // 
             this.nuevaToolStripMenuItem1.Name = "nuevaToolStripMenuItem1";
-            this.nuevaToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.nuevaToolStripMenuItem1.Size = new System.Drawing.Size(242, 34);
             this.nuevaToolStripMenuItem1.Text = "Nueva";
             this.nuevaToolStripMenuItem1.Click += new System.EventHandler(this.nuevaToolStripMenuItem1_Click);
+            // 
+            // darDeBajaAltaToolStripMenuItem1
+            // 
+            this.darDeBajaAltaToolStripMenuItem1.Name = "darDeBajaAltaToolStripMenuItem1";
+            this.darDeBajaAltaToolStripMenuItem1.Size = new System.Drawing.Size(242, 34);
+            this.darDeBajaAltaToolStripMenuItem1.Text = "Dar de Baja/Alta";
+            this.darDeBajaAltaToolStripMenuItem1.Click += new System.EventHandler(this.darDeBajaAltaToolStripMenuItem1_Click);
             // 
             // lstClientes
             // 
@@ -194,12 +204,41 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // darDeBajaAltaToolStripMenuItem1
+            // btnReporteCuentas
             // 
-            this.darDeBajaAltaToolStripMenuItem1.Name = "darDeBajaAltaToolStripMenuItem1";
-            this.darDeBajaAltaToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.darDeBajaAltaToolStripMenuItem1.Text = "Dar de Baja/Alta";
-            this.darDeBajaAltaToolStripMenuItem1.Click += new System.EventHandler(this.darDeBajaAltaToolStripMenuItem1_Click);
+            this.btnReporteCuentas.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnReporteCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReporteCuentas.Location = new System.Drawing.Point(916, 637);
+            this.btnReporteCuentas.Name = "btnReporteCuentas";
+            this.btnReporteCuentas.Size = new System.Drawing.Size(251, 98);
+            this.btnReporteCuentas.TabIndex = 6;
+            this.btnReporteCuentas.Text = "Generar Reporte de las transacciones";
+            this.btnReporteCuentas.UseVisualStyleBackColor = false;
+            this.btnReporteCuentas.Click += new System.EventHandler(this.btnReporteCuentas_Click);
+            // 
+            // btnRepClientes
+            // 
+            this.btnRepClientes.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnRepClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRepClientes.Location = new System.Drawing.Point(916, 427);
+            this.btnRepClientes.Name = "btnRepClientes";
+            this.btnRepClientes.Size = new System.Drawing.Size(251, 98);
+            this.btnRepClientes.TabIndex = 7;
+            this.btnRepClientes.Text = "Generar Reporte de los clientes";
+            this.btnRepClientes.UseVisualStyleBackColor = false;
+            this.btnRepClientes.Click += new System.EventHandler(this.btnRepClientes_Click);
+            // 
+            // btnRepoCuentas
+            // 
+            this.btnRepoCuentas.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnRepoCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRepoCuentas.Location = new System.Drawing.Point(916, 531);
+            this.btnRepoCuentas.Name = "btnRepoCuentas";
+            this.btnRepoCuentas.Size = new System.Drawing.Size(251, 98);
+            this.btnRepoCuentas.TabIndex = 8;
+            this.btnRepoCuentas.Text = "Generar Reporte de las cuentas con transacciones";
+            this.btnRepoCuentas.UseVisualStyleBackColor = false;
+            this.btnRepoCuentas.Click += new System.EventHandler(this.btnRepoCuentas_Click);
             // 
             // frmPrincipal
             // 
@@ -207,6 +246,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1827, 1050);
+            this.Controls.Add(this.btnRepoCuentas);
+            this.Controls.Add(this.btnRepClientes);
+            this.Controls.Add(this.btnReporteCuentas);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvMovimientos);
             this.Controls.Add(this.dgvTransacciones);
@@ -246,5 +288,8 @@
         private System.Windows.Forms.DataGridView dgvMovimientos;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ToolStripMenuItem darDeBajaAltaToolStripMenuItem1;
+        private System.Windows.Forms.Button btnReporteCuentas;
+        private System.Windows.Forms.Button btnRepClientes;
+        private System.Windows.Forms.Button btnRepoCuentas;
     }
 }
